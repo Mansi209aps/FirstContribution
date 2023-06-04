@@ -1,8 +1,11 @@
 import React from "react";
+import Login from "./Login";
+import { Link } from "react-router-dom";
 
-function Header() {
+
+const Header = props => {
     return (
-        <nav className="navbar navbar-expand-lg bg-white">
+        <nav className="navbar navbar-expand-lg bg-success-subtle">
             <div className="container-fluid">
                 <a className="navbar-brand" href="#">Navbar</a>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -31,6 +34,21 @@ function Header() {
                         </li>
                     </ul>
                 </div>
+            </div>
+            <div>
+                <div className="d-flex">
+                    <button className="btn btn-primary m-2 btn-lg p-2">
+                        <Link to="/login">
+                            <div className="text-danger pr-2">Login</div>
+                        </Link>
+                    </button>
+                    <button className="btn btn-primary m-2 btn-lg p-2">
+                        <Link to="/signup">
+                            <div className="text-danger pr-2">SignUp</div>
+                        </Link>
+                    </button>
+                </div>
+                {/* <Link to='/' className="btn btn-primary m-2 btn-lg p-2" href="#" role="button">SignUp</Link> */}
             </div>
         </nav>
     );
